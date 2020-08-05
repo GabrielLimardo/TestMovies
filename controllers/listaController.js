@@ -18,7 +18,7 @@ const listaController = {
     },
     
     detail: (req, res) => {
-        db.Peliculas.dindByPk(req.params.id)
+        db.Peliculas.findByPk(req.params.id)
             .then(function (pelicula) {
                res.render("detail", {pelicula: pelicula})
             })
