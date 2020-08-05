@@ -24,4 +24,4 @@ app.listen(3000, function() {
 
 app.use('/', homeRoutes);
 app.use('/register', registerRoutes);
-app.use("/lista", listaRoutes);
+app.use("/list", listaRoutes);

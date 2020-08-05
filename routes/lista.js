@@ -10,4 +10,5 @@ const validator = require('../middlewares/validator');
 
  
 router.get("/", listaController.list);
+router.get("/detail/:id", listaController.detail);
 module.exports = router;

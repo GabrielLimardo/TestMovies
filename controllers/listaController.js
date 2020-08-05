@@ -15,6 +15,14 @@ const listaController = {
                res.render("lista", {peliculas: peliculas})
             })
             .catch(e => console.log(e))
+    },
+    
+    detail: (req, res) => {
+        db.Peliculas.dindByPk(req.params.id)
+            .then(function (pelicula) {
+               res.render("detail", {pelicula: pelicula})
+            })
+            .catch(e => console.log(e))
     }
 }
 
