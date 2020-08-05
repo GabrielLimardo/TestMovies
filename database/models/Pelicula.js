@@ -5,6 +5,10 @@ module.exports = (sequelize, dataTypes ) => {
         rating: dataTypes.INTEGER,
         length: dataTypes.INTEGER,
     }
-    const Pelicula = sequelize.define(alias, cols);
+    const config = {
+        tableName: "movies",
+        timestamps: false
+    }
+    const Pelicula = sequelize.define(alias, cols, config);
     return Pelicula
 }
