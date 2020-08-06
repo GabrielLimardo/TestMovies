@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser');
 const homeRoutes = require('./routes/index');
 const registerRoutes = require("./routes/register");
 const listaRoutes = require("./routes/lista.js");
-
+const apiMoviesRouter = require("./routes/api/movies")
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public')); 
@@ -25,3 +25,4 @@ app.listen(3000, function() {
 app.use('/', homeRoutes);
 app.use('/register', registerRoutes);
 app.use("/list", listaRoutes);
+app.use("/api/movies", apiMoviesRouter)
